@@ -1,4 +1,4 @@
-(function test() {});
+(function test() {
 
 	// xhrButton.addEventListener('click', () => {
 	// 	let xhr = new XMLHttpRequest();
@@ -81,4 +81,4 @@
 			event.target.checked = true;
 		}	
 	});
-});
+})();
