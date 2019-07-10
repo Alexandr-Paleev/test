@@ -27,7 +27,7 @@
 				alert(`Ответ ${respons.status} ${respons.statusText}`);
 			}
 		});
-	});
+	}, {once : true});
 
 
 	function showTasks(res) {
