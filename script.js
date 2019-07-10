@@ -79,8 +79,10 @@
 				}else if (e.target.classList.contains('checkbox')) {
 					let div = e.target.parentNode;
 					div.classList.add('listTrue');
-					div.remove();
-					resultTrue.appendChild(div);
+					setTimeout(function() {
+					    div.remove();
+					    resultTrue.appendChild(div);
+					}, 1500);
 				}
 			});
 		}
