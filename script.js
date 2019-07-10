@@ -24,7 +24,7 @@
 					showTasks(res);
 				});
 			}else{
-				alert(`Ответ ${respons.status} ${respons.statusText}`);
+				alert(`Error: ${respons.status} : ${respons.statusText}`);
 			}
 		});
 	}, {once : true});
@@ -73,13 +73,13 @@
 	    const itemFalse = [...(document.querySelectorAll('.listFalse'))];
 	    for (let key of itemFalse) {
 	    
-		    key.addEventListener('change', function(e) {
+		    key.addEventListener('change', e => {
 				if (e.target.classList.contains('listFalse')) {
 					e.target.classList.toggle('listTrue');
 				}else if (e.target.classList.contains('checkbox')) {
 					let div = e.target.parentNode;
 					div.classList.add('listTrue');
-					setTimeout(function() {
+					setTimeout(() => {
 					    div.remove();
 					    resultTrue.appendChild(div);
 					}, 1500);
