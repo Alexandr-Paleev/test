@@ -8,11 +8,11 @@ body {
 }
 .listFalse {
 	display: flex;
-	background: green;
+	background: red;
 	transition: .5s;
 }
 .listTrue {
 	display: flex;
-	background: red;
+	background: green;
 	text-decoration: line-through;
 }
