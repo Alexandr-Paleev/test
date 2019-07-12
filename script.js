@@ -17,22 +17,24 @@
 
 
 	fetchButton.addEventListener('click', () => {
-		fetch('https://jsonplaceholder.typicode.com/todos').then(respons => {
-			if (respons.ok) {
-				respons.json().then(json => {
-					res = json;
-					showTasks(res);
-				});
+		fetch('https://jsonplaceholder.typicode.com/todos')
+		.then(respons => {
+			if (respons.ok ? respons : Promise.reject()) {
+				return respons.json();
 			}else{
-				alert(`Error: ${respons.status} : ${respons.statusText}`);
+				return reject();
 			}
+		}).then(data => {
+			showTasks(data);
+		}).catch(() => {
+			alert(`Error: API - not found`);
 		});
 	}, {once : true});
 
 
-	function showTasks(res) {
+	function showTasks(data) {
 
-		res.forEach(task => {
+		data.forEach(task => {
 
 	        if (task.userId == 2 && task.completed == false) {
 
