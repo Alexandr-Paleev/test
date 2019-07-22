@@ -1,21 +1,5 @@
 (function () {
 
-	// xhrButton.addEventListener('click', () => {
-	// 	let xhr = new XMLHttpRequest();
-
-	// 	xhr.addEventListener('readystatechange', () => {
-	// 		if(xhr.readyState === 4 && xhr.status === 200) {
-	// 			let res = JSON.parse(xhr.responseText);
-	// 			showNames(res);
-	// 		}
-	// 	});
-
-	// 	xhr.open("GET", "https://jsonplaceholder.typicode.com/todos");
-	// 	xhr.send(null);
-
-	// });
-
-
 	fetchButton.addEventListener('click', () => {
 		fetch('https://jsonplaceholder.typicode.com/todos')
 		.then(respons => {
